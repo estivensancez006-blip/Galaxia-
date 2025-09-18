@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galaxia de Frases Románticas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0; padding: 0; height: 100%; overflow: hidden;
+      background: #050010;
+    }
+    #galaxy-canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 0;
+      background: transparent;
+    }
+    .title {
+      position: absolute;
+      top: 32px; left: 0; right: 0;
+      text-align: center;
+      color: #fff;
+      font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+      font-size: 2.2em;
+      text-shadow: 0 2px 16px #F59FD2;
+      z-index: 2;
+      pointer-events: none;
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 600px) {
+      .title { font-size: 1.3em; top: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="title">Galaxia de Frases Románticas</div>
+  <canvas id="galaxy-canvas"></canvas>
+  <!-- Incluye Three.js desde CDN -->
+  <script src="https://unpkg.com/three@0.153.0/build/three.min.js"></script>
+  <!-- Tu código de galaxia -->
+  <script type="module" src="galaxy.js"></script>
+</body>
+</html>
